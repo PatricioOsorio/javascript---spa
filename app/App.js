@@ -1,13 +1,17 @@
 import { Header } from './components/Header.js';
+import { Main } from './components/Main.js';
 import { Loader } from './components/Loader.js';
-import ajax from './helpers/ajax.js';
-import api from './helpers/wp_api.js';
+import { Router } from './components/Router.js';
 
 export default function App() {
-  const d = document;
-  const $root = d.querySelector('#root');
+  const $root = document.querySelector('#root');
+
+  $root.innerHTML = null;
 
   $root.appendChild(Header());
+  $root.appendChild(Main());
+
   $root.appendChild(Loader());
 
+  Router();
 }
