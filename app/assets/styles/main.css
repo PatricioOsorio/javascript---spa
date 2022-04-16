@@ -1,7 +1,9 @@
 :root {
   --container-width: 1200px;
   --easeInOut: cubic-bezier(0.39, 0.57, 0.56, 1);
-  --radius: 10px;
+
+  --radius-sm: 5px;
+  --radius-md: 10px;
 
   --background: #ececec;
   --foreground-primary: #fafafa;
@@ -47,7 +49,7 @@ a:hover {
   filter: opacity(0.9);
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
@@ -57,3 +59,66 @@ video {
   height: auto;
 }
 
+.error {
+  padding: 1rem;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: var(--danger);
+}
+
+.loader {
+  margin: 1rem auto;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+}
+
+.form-search {
+  margin: auto;
+  text-align: center;
+}
+
+.form-search input {
+  font-family: inherit;
+  display: block;
+  margin: auto;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  border: 1px solid #cacaca;
+  outline: none;
+}
+
+.form-search input:focus {
+  border: none;
+  border: 1px solid var(--primary);
+}
+
+.header {
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: var(--background);
+}
+
+.menu {
+  margin-bottom: 1rem;
+}
+
+.menu > * {
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: color 0.3s var(--easeInOut),
+    background-color 0.3s var(--easeInOut), font-size 0.3s var(--easeInOut);
+}
+
+.menu > *:hover {
+  color: #fff;
+  background-color: var(--primary);
+  font-size: bold;
+}
