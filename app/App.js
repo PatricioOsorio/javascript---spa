@@ -2,6 +2,7 @@ import { Header } from './components/Header.js';
 import { Main } from './components/Main.js';
 import { Loader } from './components/Loader.js';
 import { Router } from './components/Router.js';
+import { InfiniteScroll } from './helpers/infinite_scroll.js';
 
 export default function App() {
   const $root = document.querySelector('#root');
@@ -14,4 +15,5 @@ export default function App() {
   $root.appendChild(Loader());
 
   Router();
+  InfiniteScroll();
 }
